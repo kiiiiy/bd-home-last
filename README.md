@@ -49,9 +49,9 @@ chmod +x scripts/*.sh
 
 3️⃣ 운영 레포 / 앱 이름 지정 후 실행
 
-export OPS_REPO="bd-home-<github-id>"
+export OPS_REPO="bd-home-<깃허브 아이디나 원하는 단어..>"
 
-export FLY_APP="bd-homepage-<github-id>"
+export FLY_APP="bd-homepage-<위와 동일>"
 
 ./scripts/bootstrap_owner.sh
 
@@ -60,6 +60,9 @@ export FLY_APP="bd-homepage-<github-id>"
 
 GitHub Actions 탭에서 모두 초록 표시(✅) 인지 확인
 
+⚠️ 만일 fly-backend.yml은 초록 표시 뜨는데 pages-frontend.yml만 에러 날 경우 pages 설정 문제!
+settings -> pages -> Build and deployment -> Source를 Github Actions로 변경 
+이 경우 90% 문제 해결됨
 
 
 
@@ -74,7 +77,6 @@ URL 예시: https://<github-id>.github.io/<repo-name>/
 2️⃣ 백엔드 (Fly.io)
 
 Health Check 엔드포인트: https://<fly-app-name>.fly.dev/api/health
-
 
 
 
