@@ -1,1 +1,1 @@
-window.API_BASE = "https://bd-homepage-fucky.fly.dev";
+window.API_BASE = "https://bd-homepage-last.fly.dev";
