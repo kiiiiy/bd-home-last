@@ -89,7 +89,6 @@ cd "$ROOT_DIR"
 echo "==> Fly app: $APP_NAME"
 
 
-
 git add -A
 git commit -m "chore: generate backend/frontend & workflows" || true
 git push
@@ -101,5 +100,5 @@ echo "- Frontend deploy: GitHub Actions -> GitHub Pages"
 echo
 echo "Check:"
 echo "  GitHub repo: https://github.com/${OWNER}/${OPS_REPO}"
-echo "  (After first backend deploy) Fly URL: https://${FLY_APP}.fly.dev/api/health"
+echo "  (After first backend deploy) Fly URL: https://bd-homepage-${OWNER}.fly.dev/api/health"
 echo "  Pages URL: https://${OWNER}.github.io/${OPS_REPO}/"
