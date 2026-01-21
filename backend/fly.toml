@@ -2,7 +2,7 @@ app = "bd-homepage-last"
 primary_region = "nrt"
 
 [env]
-  JAVA_TOOL_OPTIONS = "-XX:MaxRAMPercentage=55 -XX:InitialRAMPercentage=15 -XX:+UseSerialGC -XX:MaxMetaspaceSize=96m"
+  JAVA_OPTS = "-XX:MaxRAMPercentage=55 -XX:InitialRAMPercentage=15 -XX:+UseSerialGC -XX:MaxMetaspaceSize=96m"
 
 [build]
   dockerfile = "Dockerfile"
@@ -14,14 +14,8 @@ primary_region = "nrt"
   auto_start_machines = true
   min_machines_running = 0
 
-  [http_service.concurrency]
-    type = "connections"
-    hard_limit = 25
-    soft_limit = 20
-
   [[http_service.checks]]
-    type = "http"
-    path = "/api/health"
+    type = "tcp"
     interval = "20s"
-    timeout = "5s"
-    grace_period = "240s"
+    timeout = "10s"
+    grace_period = "300s"
