@@ -2,8 +2,8 @@ app = "bd-homepage-last"
 primary_region = "nrt"
 
 [env]
-  SPRING_PROFILES_ACTIVE = "free"
-  JAVA_OPTS = "-Xms32m -Xmx192m -XX:MaxMetaspaceSize=96m"
+  JAVA_TOOL_OPTIONS = "-XX:MaxRAMPercentage=55 -XX:InitialRAMPercentage=15 -XX:+UseSerialGC -XX:MaxMetaspaceSize=96m"
+
 [build]
   dockerfile = "Dockerfile"
 
