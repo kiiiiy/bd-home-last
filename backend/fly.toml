@@ -2,7 +2,7 @@ app = "bd-homepage-last"
 primary_region = "nrt"
 
 [env]
-  JAVA_OPTS = "-XX:MaxRAMPercentage=55 -XX:InitialRAMPercentage=15 -XX:+UseSerialGC -XX:MaxMetaspaceSize=96m"
+  JAVA_TOOL_OPTIONS = "-Xms16m -Xmx128m -XX:MaxMetaspaceSize=64m -XX:+UseSerialGC"
 
 [build]
   dockerfile = "Dockerfile"
@@ -18,4 +18,4 @@ primary_region = "nrt"
     type = "tcp"
     interval = "20s"
     timeout = "10s"
-    grace_period = "300s"
+    grace_period = "420s"
