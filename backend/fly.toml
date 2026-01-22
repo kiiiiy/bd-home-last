@@ -2,7 +2,7 @@ app = "bd-homepage-last"
 primary_region = "nrt"
 
 [env]
-  JAVA_TOOL_OPTIONS = "-Xms16m -Xmx80m -XX:MaxMetaspaceSize=40m -Xss256k -XX:+UseSerialGC -Dspring.main.lazy-initialization=true -Dspring.jpa.open-in-view=false"
+  JAVA_TOOL_OPTIONS = "-Xms16m -Xmx80m -XX:MaxMetaspaceSize=40m -Xss256k -XX:+UseSerialGC -Dspring.main.lazy-initialization=true -Dspring.jpa.open-in-view=false -Dspring.jmx.enabled=false"
 
 [build]
   dockerfile = "Dockerfile"
@@ -16,6 +16,6 @@ primary_region = "nrt"
 
   [[http_service.checks]]
     type = "tcp"
-    interval = "20s"
+    interval = "30s"
     timeout = "10s"
-    grace_period = "420s"
+    grace_period = "600s"
