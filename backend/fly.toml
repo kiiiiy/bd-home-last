@@ -2,7 +2,7 @@ app = "bd-homepage-last"
 primary_region = "nrt"
 
 [env]
-  JAVA_TOOL_OPTIONS = "-Xms16m -Xmx128m -XX:MaxMetaspaceSize=64m -XX:+UseSerialGC"
+  JAVA_TOOL_OPTIONS = "-Xms16m -Xmx80m -XX:MaxMetaspaceSize=40m -Xss256k -XX:+UseSerialGC -Dspring.main.lazy-initialization=true -Dspring.jpa.open-in-view=false"
 
 [build]
   dockerfile = "Dockerfile"
